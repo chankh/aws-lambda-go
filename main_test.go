@@ -5,13 +5,13 @@ import (
 )
 
 func TestHandler(t *testing.T) {
-	key := Request{"khchan"}
+	key := Request{"Gopher"}
 	result, err := Handle(key, nil)
 	if err != nil {
 		t.Errorf("Unexpected error %v", err)
 	}
 
-	wanted := "Hello khchan!"
+	wanted := "Hello Gopher!"
 	if result != wanted {
 		t.Errorf("wanted %s, actual %s", wanted, result)
 	}
